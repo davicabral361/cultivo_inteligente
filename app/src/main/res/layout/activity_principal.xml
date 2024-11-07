@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Cultivo Inteligente"
+        android:textColor="@color/material_dynamic_neutral_variant30"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Label para "Tipo de Solo" -->
+    <TextView
+        android:id="@+id/labelTipoSolo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="20dp"
+        android:text="Tipo de Solo"
+        android:textColor="@color/material_dynamic_neutral30"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitulo" />
+
+    <!-- Spinner para Tipo de Solo -->
+    <Spinner
+        android:id="@+id/etTipoSolo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/edittext_background"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelTipoSolo" />
+
+    <!-- Label para "Época do Ano" -->
+    <TextView
+        android:id="@+id/labelEpocaAno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="20dp"
+        android:text="Época do Ano"
+        android:textColor="@color/material_dynamic_neutral30"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etTipoSolo" />
+
+    <!-- Spinner para Época do Ano -->
+    <Spinner
+        android:id="@+id/etEpocaAno"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/edittext_background"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelEpocaAno" />
+
+    <!-- Botão Solo -->
+    <Button
+        android:id="@+id/btnVerificarSolo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Verificar Solo"
+        android:backgroundTint="#1E3A8A"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/etEpocaAno"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp" />
+
+    <!-- Botão Tempo -->
+    <Button
+        android:id="@+id/btnPrevisaoTempo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Previsão do Tempo"
+        android:backgroundTint="#1E3A8A"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/btnVerificarSolo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp" />
+
+    <!-- Botão Gerar Tutorial -->
+    <Button
+        android:id="@+id/btnTutorial"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Gerar Tutorial"
+        android:backgroundTint="#00C853"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/btnPrevisaoTempo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp" />
+
+    <!-- Resultado Solo -->
+    <TextView
+        android:id="@+id/tvResultadoSolo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnTutorial"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp" />
+
+    <!-- Previsão do Tempo -->
+    <TextView
+        android:id="@+id/tvPrevisaoTempo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvResultadoSolo"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp" />
+
+    <!-- Botão Logout -->
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:backgroundTint="#1E3A8A"
+        app:layout_constraintTop_toBottomOf="@id/tvPrevisaoTempo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="28dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
